@@ -1,0 +1,33 @@
+installCRDs: false
+server:
+  config:
+    url: https://argo.home.mklug.at
+  service:
+    type: NodePort
+  nodeSelector:
+    node-role.kubernetes.io/master: "true"
+  tolerations:
+    - key: ""
+      operator: Exists
+      effect: ""
+controller:
+  nodeSelector:
+    node-role.kubernetes.io/master: "true"
+  tolerations:
+    - key: ""
+      operator: Exists
+      effect: ""
+dex:
+  nodeSelector:
+    node-role.kubernetes.io/master: "true"
+  tolerations:
+    - key: ""
+      operator: Exists
+      effect: ""
+repoServer:
+  nodeSelector:
+    node-role.kubernetes.io/master: "true"
+  tolerations:
+    - key: ""
+      operator: Exists
+      effect: ""
